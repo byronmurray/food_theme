@@ -1,26 +1,31 @@
-.hero-image {
-	height: 240px;
+.flex {
+	display: flex;
 }
 
-form {
-	margin: 20px 0 40px 0;
+.centered {
+	margin: auto;
+	text-align: center;
 }
 
-img {
-	max-width: 100%;
+.action-button {
+    margin: 20px auto 10px;
+    padding: 6px 15px;
+    border: 2px solid #d41350;
+    border-radius: 3px;
+    background-color: #f72869;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-h2 > span {
-	color: $brand-primary;
-}
-
-.padding {
-	padding: 40px 0;
-}
-
-
-/* footer */
-
-footer img {
-	width: 180px;
+.action-button:hover {
+	border-color: #000;
+    background-color: #000;
+    color: #fff;
 }

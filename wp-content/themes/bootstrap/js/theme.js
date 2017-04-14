@@ -5,7 +5,7 @@ jQuery.noConflict();
       $('img').removeAttr('width').removeAttr('height');
 
 
-      $(window).scroll(function(){ 
+      /*$(window).scroll(function(){ 
 
 		var a = 112;
 		var pos = $(window).scrollTop();
@@ -15,14 +15,14 @@ jQuery.noConflict();
 		else {
 		    $(".navbar-fixed-top").removeClass('scroll-nav')
 		}
-		});
+		});*/
 
 
 
 		/*styles to min height for home page*/
 		var windowHeight = $( window ).height();
 		
-		$("#featureCarousel .item").css("height", windowHeight + 'px');
+		$(".main-hero").css("height", windowHeight + 'px');
 
 
 	

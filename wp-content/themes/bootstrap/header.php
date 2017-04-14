@@ -9,14 +9,6 @@
   <?php wp_head(); ?>
 </head>
 
-<style>
-  
-  .page-container {
-    margin-top: 60px;
-  }
-
-
-</style>
 
 <body <?php body_class(); ?>>
 
@@ -27,21 +19,26 @@
 <![endif]-->
 
 <nav class="navbar navbar-fixed-top">
-  <div class="container">
-  <!-- <div class="social-icons">
-    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-  </div> -->
+
+  <div class="text-center brand-name">
+    <a href="<?php echo home_url('/'); ?>">Fish and chips</a>
+  </div>
+
+  <div class="container-fulid">
+
     <div class="navbar-header">
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/logo/logo.png" alt=""></a>
+
+
+
     </div>
+
     <div class="collapse navbar-collapse" id="navbar">
       
         <?php
@@ -49,11 +46,13 @@
                 'menu'              => 'primary',
                 'theme_location'    => 'primary',
                 'depth'             => 2,
-                'menu_class'        => 'nav navbar-nav navbar-right',
+                'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
     </div><!-- /.navbar-collapse -->
+
   </div><!-- /.container -->
+
 </nav>

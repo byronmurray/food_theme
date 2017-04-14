@@ -1,46 +1,40 @@
-#map {
-	height: 700px;
-}
-
-.rounded-circle {
-	border-radius: 50%;
-	background: black;
-}
-
-.contact-container {
-	background: url(http://www.apimages.com/Images/AP970870282113.jpg) no-repeat;
-	background-size: auto auto;
-	background-size: cover;
-	color: #fff;
-}
-
-.nav > li > a:focus, .nav > li > a:hover {
-    text-decoration: none;
-    background-color: unset;
+.header-title {
+	font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
 }
 
 
-.flex {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	
-	.feature-box {
-		max-width: 500px;
-	}
+.title_1 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
+.title_2 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color: #fa2d6e;
+    font-size: 55px;
+}
 
-@media (min-width:768px) {
-	.flex {
-		align-items: flex-start;
-		justify-content: space-between;
-		flex-direction: row;
+.title_3 {
+    display: block;
+    margin-bottom: 0px;
+    background-color: transparent;
+    color: #14ba9f;
+    font-size: 50px;
+}
 
-		.feature-box {
-			max-width: unset;
-			flex-basis: 31%;
-		}		
-	}
-
+.important-text {
+    display: inline-block;
+    font-weight: 800;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
 }
