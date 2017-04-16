@@ -1,40 +1,262 @@
-.header-title {
+@mixin title($color, $size) {
 	font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
-}
-
-
-.title_1 {
-    margin-top: 0px;
+	color: $color;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	margin-top: 0px;
     margin-bottom: 15px;
-    background-color: transparent;
-    color: #fff;
-    font-size: 55px;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-size: $size;
 }
 
-.title_2 {
-    margin-top: 0px;
-    margin-bottom: 15px;
-    background-color: transparent;
-    color: #fa2d6e;
-    font-size: 55px;
+#menu {
+	margin: 60px 0;
+	.flex-box-1 {
+		text-align: end;
+	}
+	.flex-box-1, .flex-box-2 {
+		display: flex;
+		flex:1;
+		padding: 0 20px;
+	}
+	.welcome-title{
+		@include title($brand-primary, 35px);
+	    font-weight: 800;
+	    text-shadow: unset;
+	}
+	.menu-item {
+		@include title(#000, 25px);
+	    font-weight: 800;
+	    text-shadow: unset;
+	    margin-bottom: 5px;
+	}
+	.menu-title{
+		@extend .menu-item;
+		font-size: 30px;
+	}
+	.price {
+		margin: 0 0 10px !important;
+	}
+	.fa.fa-cutlery {
+	    background: #fff;
+	    padding: 0 20px;
+	    font-size: 25px;
+	}
+
 }
 
-.title_3 {
+
+p{
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+
+.flex {
+	display: flex;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.centered {
+	flex: 1;
+	margin: auto;
+	text-align: center;
+}
+
+.divider-bock {
+    height: 65px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.divider-icon-block {
+    position: relative;
+    z-index: 1;
     display: block;
-    margin-bottom: 0px;
-    background-color: transparent;
-    color: #14ba9f;
-    font-size: 50px;
+    width: 65px;
+    height: 65px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 40px;
+    background-color: #fff;
 }
 
-.important-text {
-    display: inline-block;
-    font-weight: 800;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
+.divider-line-with-icon {
+    height: 2px;
+    margin-top: -33px;
+    background-color: #d9d9d9;
+}
+
+#main-hero {
+	.title_1 {
+		@include title(#fff, 55px);
+	    font-weight: 800;
+	}
+
+	.title_2 {
+	    @include title($brand-primary, 55px);
+
+	}
+
+	.title_3 {
+	    @include title(#fff, 50px);
+
+	}
+
+} /* end main hero section */
+
+/* welcome section */
+#welcome {
+	.container {
+		margin: auto;
+	}
+	.welcome-title {
+		@include title($brand-primary, 55px);
+		text-shadow: 1px 2px 2px rgba(0, 0, 0, .4);
+		font-weight: 900;
+
+	}
+	.welcome-tagline {
+	    margin-top: -7px;
+	    margin-bottom: 30px;
+	    color: $brand-features;
+	    font-size: 23px;
+	    font-weight: 300;
+	}
+	.flex-box-wrap{
+		h2 {
+		    margin-bottom: 15px;
+		    font-family: 'Open Sans', sans-serif;
+		    font-size: 28px;
+		    font-weight: 800;
+		    text-transform: uppercase;
+		}
+
+		h3{
+			@extend .welcome-tagline;
+		}
+		
+		div {
+			@extend .flex-1;
+		}
+	} 
+	
+	
+
+} /* end welcome section */
+
+
+
+#specials {
+	@extend .flex;
+	.overlay{
+		@extend .centered;
+		width: 100%;
+		justify-content: center;
+		flex-direction: column;
+		display: flex;
+		height: 100%;
+		transition: background-color 2s;
+		&:hover {
+			background-color: rgba(238, 203, 18, 0.8);
+		}
+	}
+	.title-1 {
+		@include title(#fff, 55px);
+		font-weight: 800;
+	}
+	.title-2 {
+		@include title(#fff, 35px);
+		font-weight: 800;
+	}
+	p{
+		color: #fff;
+	}
+}
+
+/* about section */
+
+
+#about {
+	padding: 60px 0;
+	.title-1 {
+		@include title(#000, 35px);
+		text-shadow: unset;
+		font-weight: 800;
+	}
+	.title-2 {
+		@include title($brand-primary, 35px);
+		text-shadow: unset;
+		font-weight: 800;
+	}
+}
+
+.column_1, .column_2 {
+	flex: 1;
+}
+
+#about_2 {
+	.column_1 {
+		background-color: #2d3136;
+		color: #fff;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		.text{
+			width: 50%;
+			justify-content: flex-end;
+			margin-right: 5%;
+			.title-1 {
+				@include title($brand-primary, 35px);
+				font-weight: 800;
+			}
+			.title-2 {
+				@include title(#fff, 35px);
+				font-weight: 800;
+			}
+		}
+	}
+}
+
+
+.hr {
+    position: relative;
+	text-align: center;
+	border-top: 2px solid #d9d9d9;
+	margin: 30px 0;
+}
+.hr-fa {
+    position: absolute;
+    top: -13px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.fa.fa-cutlery {
+    background: #2d3136;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+#about .fa.fa-cutlery, #welcome .fa.fa-cutlery  {
+	background: #fff !important;
+}
+
+#welcome .hr {
+	margin: 60px;
+}
+
+#about .hr {
+	margin: 40px;
 }

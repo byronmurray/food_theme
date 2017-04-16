@@ -22,7 +22,8 @@ jQuery.noConflict();
 		/*styles to min height for home page*/
 		var windowHeight = $( window ).height();
 		
-		$(".main-hero").css("height", windowHeight + 'px');
+		$("#main-hero").css("height", windowHeight + 'px');
+		$("#welcome").css("min-height", windowHeight + 'px');
 
 
 	

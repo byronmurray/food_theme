@@ -30,20 +30,24 @@
 		}
 
 		.container-fulid {
-			border-top: 1px solid #2b2b2b;
+			border-top: 1px solid $brand-features;
 		}
 
 		.navbar-nav>li>a {
 		    margin-top: -1px;
 		    padding: 20px 25px;
 		    border-top: 1px solid hsla(0, 0%, 100%, .09);
-		    border-right: 1px none #2b2b2b;
+		    border-right: 1px none $brand-features;
 		    background-color: transparent;
 		    -webkit-transition: background-color 500ms ease, color 500ms ease;
 		    transition: background-color 500ms ease, color 500ms ease;
 		    color: #fff;
 		    font-size: 13px;
 		    text-transform: capitalize;
+		    &:hover {
+		    	border-top-color: $brand-primary;
+    			background-color: #343638;
+		    }
 		}
 	}
 
