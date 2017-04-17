@@ -20,7 +20,7 @@
 
 <nav class="navbar navbar-fixed-top">
 
-  <div class="text-center brand-name">
+  <div id="brand-name" class="text-center brand-name">
     <a href="<?php echo home_url('/'); ?>">Fish and chips</a>
   </div>
 

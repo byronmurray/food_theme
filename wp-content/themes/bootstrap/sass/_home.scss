@@ -9,10 +9,28 @@
     font-size: $size;
 }
 
+.button-white {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    text-weight: 900;
+    font-weight: 700;
+    border-radius: 0;
+    &:hover{
+    	background: black;
+    	color: $brand-primary;
+    	border: 2px solid black;
+    }
+}
+
 #menu {
 	margin: 60px 0;
 	.flex-box-1 {
 		text-align: end;
+	}
+	.flex-box-1 div, .flex-box-2 div {
+		flex: 1;
 	}
 	.flex-box-1, .flex-box-2 {
 		display: flex;
@@ -158,17 +176,8 @@ p{
 
 #specials {
 	@extend .flex;
-	.overlay{
-		@extend .centered;
-		width: 100%;
-		justify-content: center;
-		flex-direction: column;
-		display: flex;
-		height: 100%;
-		transition: background-color 2s;
-		&:hover {
-			background-color: rgba(238, 203, 18, 0.8);
-		}
+	.button-white {
+	    margin-top: 30px;
 	}
 	.title-1 {
 		@include title(#fff, 55px);
@@ -181,13 +190,39 @@ p{
 	p{
 		color: #fff;
 	}
+	.overlay{
+		@extend .centered;
+		width: 100%;
+		justify-content: center;
+		flex-direction: column;
+		display: flex;
+		height: 100%;
+		transition: background-color 2s;
+		&:hover {
+			background-color: rgba(238, 203, 18, 0.8);
+		}
+	}
+
+	.overlay .title-2, .overlay p, .overlay .button-white {
+		opacity: 0;
+		transition: opacity 3s;
+  		-webkit-transition: opacity 3s;
+	}
+
+	.overlay:hover .title-2, .overlay:hover p, .overlay:hover .button-white {
+		opacity: 1;
+	}
+	
 }
 
 /* about section */
 
 
 #about {
-	padding: 60px 0;
+	padding: 80px 0;
+	.column_1 img {
+		width: 500px;
+	}
 	.title-1 {
 		@include title(#000, 35px);
 		text-shadow: unset;
@@ -205,6 +240,29 @@ p{
 }
 
 #about_2 {
+	.column_1 {
+		background-color: #2d3136;
+		color: #fff;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		.text{
+			width: 50%;
+			justify-content: flex-end;
+			margin-right: 5%;
+			.title-1 {
+				@include title($brand-primary, 35px);
+				font-weight: 800;
+			}
+			.title-2 {
+				@include title(#fff, 35px);
+				font-weight: 800;
+			}
+		}
+	}
+}
+
+#location {
 	.column_1 {
 		background-color: #2d3136;
 		color: #fff;
@@ -260,3 +318,16 @@ p{
 #about .hr {
 	margin: 40px;
 }
+
+
+
+
+/* FOOD MENUS */
+
+/* .hide-menu {
+	display: none;
+}
+
+.show-menu {
+	display: block !important;
+} */

@@ -10,12 +10,19 @@
 	}
 }
 
+.scroll-nav {
+	transition: opacity 3s;
+	opacity: .8;
+}
+
 
 
 @media (min-width: 768px) {
 	
 	nav {
 	    background: black;
+	    transition: opacity 1.5s;
+	    opacity: 0;
 	    .navbar-nav {
 		    margin-bottom: -5px;
 		}
